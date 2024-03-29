@@ -1,0 +1,7 @@
+|cd3
+clk => Q1.CLK
+clk => Q2.CLK
+rst => Q2.OUTPUTSELECT
+out_clk <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+

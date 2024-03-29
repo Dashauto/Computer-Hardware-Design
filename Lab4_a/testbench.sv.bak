@@ -1,0 +1,112 @@
+`timescale 1ns / 1ps
+//
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2022/02/22 00:27:44
+// Design Name: 
+// Module Name: test
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//
+
+
+module test;
+parameter DATA_WIDTH = 32;
+parameter FIFO_DEPTH = 32;
+parameter PERIOD_W =30;
+parameter PERIOD_R=17;
+logic rst;
+logic wclk;
+logic [DATA_WIDTH-1:0] wdata;
+logic wr_en;
+logic full;
+//
+logic rclk;
+logic [DATA_WIDTH-1:0] rdata;
+logic rd_en;
+logic empty;
+//
+logic error;
+logic wr_en_r;
+logic rd_en_r;
+logic rd_en_d1;
+logic [DATA_WIDTH-1:0] ref_data;
+//ref_data
+always_ff@(posedge rclk,posedge rst)
+if(rst)
+    ref_data<=0;
+else if(rd_en_d1)
+    ref_data<=ref_data+1;
+//rd_en_d1
+always_ff@(posedge rclk)
+    rd_en_d1<=rd_en;
+//error
+always_comb
+if(rd_en_d1&&rdata!=ref_data)
+    error=1;
+else
+    error=0;
+//wclk
+initial begin
+    wclk=0;
+    forever begin
+        #(PERIOD_W/2) wclk=~wclk;
+    end
+end
+//rclk
+initial
+begin
+    rclk=0;
+    forever
+    begin
+        #(PERIOD_R/2) rclk=~rclk;
+    end
+end
+//rst
+initial
+begin
+    rst=1;
+    #50
+    rst=0;
+end
+//wdata
+always_ff@(posedge wclk,posedge rst)
+if(rst)
+    wdata<=0;
+else if(wr_en&&~full)
+    wdata<=wdata+1;
+//wr_en_r
+always_ff@(posedge wclk,posedge rst)
+if(rst)
+    wr_en_r<=0;
+else
+    wr_en_r=$random%2;
+//rd_en_r
+always_ff@(posedge rclk,posedge rst)
+if(rst)
+    rd_en_r<=0;
+else
+    rd_en_r<=$random%2;
+//rd_en,wr_en
+assign rd_en=(~empty)?rd_en_r:1'b0;
+assign wr_en=(~full)?wr_en_r:1'b0;
+//inst
+lab4_a
+#(
+.DATA_WIDTH(32),
+.FIFO_DEPTH(32)
+)
+U
+(.*);
+endmodule
+

@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/zedempire/OneDrive/4770/lab2_3/cd3.sv
+source_file = 1, C:/Users/zedempire/OneDrive/4770/lab2_3/testbench.sv
+source_file = 1, C:/Users/zedempire/OneDrive/4770/lab2_3/db/cd3.cbx.xml
+design_name = cd3
+instance = comp, \out_clk~output , out_clk~output, cd3, 1
+instance = comp, \clk~input , clk~input, cd3, 1
+instance = comp, \rst~input , rst~input, cd3, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, cd3, 1

@@ -1,0 +1,154 @@
+lui s0, 0xA1A2A # s0 = 0xA1A2A000
+addi s0, s0, 0x3A4 # s0 = 0xA1A2A3A4
+sw s0, 0x300(zero) # memory[300] = 0xA1A2A3A4
+
+lui s0, 0xB1B2B # s0 = 0xB1B2B000
+addi s0, s0, 0x3B4 # s0 = 0xB1B2B3B4
+sw s0, 0x304(zero) # memory[304] = 0xB1B2B3B4
+
+lui s0, 0xC1C2C # s0 = 0xC1C2C000
+addi s0, s0, 0x3C4 # s0 = 0xC1C2C3C4
+sw s0, 0x308(zero) # memory[308] = 0xC1C2C3C4
+
+lui s0, 0xD1D2D # s0 = 0xD1D2D000
+addi s0, s0, 0x3D4 # s0 = 0xD1D2D3D4
+sw s0, 0x30c(zero) # memory[30c] = 0xD1D2D3D4
+
+lui s0, 0xE1E2E # s0 = 0xE1E2E000
+addi s0, s0, 0x3E4 # s0 = 0xE1E2E3E4
+sw s0, 0x310(zero) # memory[310] = 0xE1E2E3E4
+
+lui s0, 0xF1F2F # s0 = 0xF1F2F000
+addi s0, s0, 0x3F4 # s0 = 0xF1F2F3F4
+sw s0, 0x314(zero) # memory[314] = 0xE1E2E3E4
+
+lui s0, 0x11223 # s0 = 0x11223000
+addi s0, s0, 0x344 # s0 = 0x11223344
+sw s0, 0x318(zero) # memory[318] = 0x11223344
+
+lui s0, 0x55667 # s0 = 0x55667000
+addi s0, s0, 0x788 # s0 = 0x55667788
+sw s0, 0x31c(zero) # memory[31c] = 0x55667788
+
+lw t0, 0x300(zero) # t0 = 0xA1A2A3A4
+srli t1, t0, 24    # t1 = 0x000000a1
+
+slli t2, t0, 8     # t2 = 0xa2a3a400
+srli t2, t2, 24    # t2 = 0x000000a2
+slli t2, t2, 8     # t2 = 0x0000a200
+
+srli t3, t0, 8     # t3 = 0x00a1a2a3
+slli t3, t3, 24    # t3 = 0xa3000000
+srli t3, t3, 8     # t3 = 0x00a30000
+
+slli t4, t0, 24    # t4 = 0xa4000000
+
+add t5, t1, t2     # t5 = 0x0000a2a1
+add t5, t5, t3     # t5 = 0x00a3a2a1
+add t5, t5, t4     # t5 = 0xa4a3a2a1
+sw t5, 0x300(zero) # memory[300] = t5 = 0xa4a3a2a1
+
+# The code below will be pretty much like the 300 address, so no comment
+
+lw t0, 0x304(zero) 
+srli t1, t0, 24    
+slli t2, t0, 8     
+srli t2, t2, 24    
+slli t2, t2, 8     
+srli t3, t0, 8    
+slli t3, t3, 24   
+srli t3, t3, 8     
+slli t4, t0, 24    
+add t5, t1, t2     
+add t5, t5, t3    
+add t5, t5, t4     
+sw t5, 0x304(zero) 
+
+lw t0, 0x308(zero) 
+srli t1, t0, 24    
+slli t2, t0, 8     
+srli t2, t2, 24    
+slli t2, t2, 8     
+srli t3, t0, 8    
+slli t3, t3, 24   
+srli t3, t3, 8     
+slli t4, t0, 24    
+add t5, t1, t2     
+add t5, t5, t3    
+add t5, t5, t4     
+sw t5, 0x308(zero) 
+
+lw t0, 0x30c(zero) 
+srli t1, t0, 24    
+slli t2, t0, 8     
+srli t2, t2, 24    
+slli t2, t2, 8     
+srli t3, t0, 8    
+slli t3, t3, 24   
+srli t3, t3, 8     
+slli t4, t0, 24    
+add t5, t1, t2     
+add t5, t5, t3    
+add t5, t5, t4     
+sw t5, 0x30c(zero)
+
+lw t0, 0x310(zero) 
+srli t1, t0, 24    
+slli t2, t0, 8     
+srli t2, t2, 24    
+slli t2, t2, 8     
+srli t3, t0, 8    
+slli t3, t3, 24   
+srli t3, t3, 8     
+slli t4, t0, 24    
+add t5, t1, t2     
+add t5, t5, t3    
+add t5, t5, t4     
+sw t5, 0x310(zero) 
+
+lw t0, 0x314(zero) 
+srli t1, t0, 24    
+slli t2, t0, 8     
+srli t2, t2, 24    
+slli t2, t2, 8     
+srli t3, t0, 8    
+slli t3, t3, 24   
+srli t3, t3, 8     
+slli t4, t0, 24    
+add t5, t1, t2     
+add t5, t5, t3    
+add t5, t5, t4     
+sw t5, 0x314(zero)
+
+lw t0, 0x318(zero) 
+srli t1, t0, 24    
+slli t2, t0, 8     
+srli t2, t2, 24    
+slli t2, t2, 8     
+srli t3, t0, 8    
+slli t3, t3, 24   
+srli t3, t3, 8     
+slli t4, t0, 24    
+add t5, t1, t2     
+add t5, t5, t3    
+add t5, t5, t4     
+sw t5, 0x318(zero)
+
+lw t0, 0x31c(zero) 
+srli t1, t0, 24    
+slli t2, t0, 8     
+srli t2, t2, 24    
+slli t2, t2, 8     
+srli t3, t0, 8    
+slli t3, t3, 24   
+srli t3, t3, 8     
+slli t4, t0, 24    
+add t5, t1, t2     
+add t5, t5, t3    
+add t5, t5, t4     
+sw t5, 0x31c(zero)
+
+
+
+
+

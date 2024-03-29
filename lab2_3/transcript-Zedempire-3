@@ -1,0 +1,100 @@
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# vsim -gui work.testbench3 
+# Start time: 09:18:43 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+run 400000
+# Break key hit
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# End time: 09:31:33 on Sep 24,2022, Elapsed time: 0:12:50
+# Errors: 0, Warnings: 3
+# vsim -gui work.testbench3 
+# Start time: 09:31:33 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+run 400000
+# Break key hit
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# End time: 09:55:09 on Sep 24,2022, Elapsed time: 0:23:36
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench3 
+# Start time: 09:55:09 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+run 400000
+# Break key hit
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# End time: 10:15:03 on Sep 24,2022, Elapsed time: 0:19:54
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench3 
+# Start time: 10:15:03 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+run 400000
+# Break key hit
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# End time: 10:23:02 on Sep 24,2022, Elapsed time: 0:07:59
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench3 
+# Start time: 10:23:02 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+run 400000
+# Break key hit
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench4
+# End time: 10:26:27 on Sep 24,2022, Elapsed time: 0:03:25
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench4 
+# Start time: 10:26:27 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench4
+# ** Error: (vsim-3033) Instantiation of 'cd4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench4 File: C:/Users/zedempire/OneDrive/4770/lab2_3/testbench.sv Line: 8
+#         Searched libraries:
+#             C:/Users/zedempire/OneDrive/4770/lab2_3/work
+# Error loading design
+# End time: 10:26:27 on Sep 24,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1

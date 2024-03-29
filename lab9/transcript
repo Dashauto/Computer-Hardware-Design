@@ -1,0 +1,38 @@
+# Compile of riscv_testbench.sv was successful.
+# Compile of riscvmulti.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 00:07:42 on May 07,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.riscmulti
+# Loading work.datapath
+# Loading work.RegNext
+# Loading work.mux2
+# Loading work.RegFetch
+# Loading work.Buffer
+# Loading work.regfile
+# Loading work.extend
+# Loading work.Buffer_2
+# Loading work.mux3
+# Loading work.alu
+# Loading work.controller
+# Loading work.FSM
+# Loading work.aludec
+# Loading work.instrdec
+# Loading work.idmem
+add wave  \
+sim:/testbench/clk \
+sim:/testbench/reset \
+sim:/testbench/WriteData \
+sim:/testbench/DataAdr \
+sim:/testbench/MemWrite
+run 4000
+# Simulation succeeded
+# ** Note: $stop    : C:/Users/zedempire/OneDrive/4770/lab9/riscv_testbench.sv(30)
+#    Time: 725 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at C:/Users/zedempire/OneDrive/4770/lab9/riscv_testbench.sv line 30
+# End time: 00:40:22 on May 07,2023, Elapsed time: 0:32:40
+# Errors: 0, Warnings: 2

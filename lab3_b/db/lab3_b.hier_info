@@ -1,0 +1,38 @@
+|lab3_b
+clk => rc~reg0.CLK
+clk => rb~reg0.CLK
+clk => ra~reg0.CLK
+clk => lc~reg0.CLK
+clk => lb~reg0.CLK
+clk => la~reg0.CLK
+clk => current_state.110.CLK
+clk => current_state.101.CLK
+clk => current_state.100.CLK
+clk => current_state.011.CLK
+clk => current_state.010.CLK
+clk => current_state.001.CLK
+clk => current_state.000.CLK
+reset => rc~reg0.ACLR
+reset => rb~reg0.ACLR
+reset => ra~reg0.ACLR
+reset => lc~reg0.ACLR
+reset => lb~reg0.ACLR
+reset => la~reg0.ACLR
+reset => current_state.110.ALOAD
+reset => current_state.101.ALOAD
+reset => current_state.100.ALOAD
+reset => current_state.011.ALOAD
+reset => current_state.010.ALOAD
+reset => current_state.001.ALOAD
+reset => current_state.000.ALOAD
+left => Selector1.IN0
+left => Selector4.IN0
+right => ~NO_FANOUT~
+la <= la~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lb <= lb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lc <= lc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra <= ra~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rb <= rb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rc <= rc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

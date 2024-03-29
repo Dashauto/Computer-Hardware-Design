@@ -1,0 +1,206 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:272), pid=628, tid=0x00000000000081b8
+#
+# JRE version: OpenJDK Runtime Environment (8.0_265-b01) (build 1.8.0_265-b01)
+# Java VM: OpenJDK 64-Bit Server VM (25.265-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000178dc95d000):  JavaThread "C2 CompilerThread4" daemon [_thread_in_native, id=33208, stack(0x0000000186300000,0x0000000186400000)]
+
+Stack: [0x0000000186300000,0x0000000186400000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+Current CompileTask:
+C2:    128  414   !   4       sun.misc.URLClassPath$JarLoader::getResource (85 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000178dca52000 JavaThread "Service Thread" daemon [_thread_blocked, id=12584, stack(0x0000000186b00000,0x0000000186c00000)]
+  0x00000178dc961000 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=14008, stack(0x0000000186a00000,0x0000000186b00000)]
+  0x00000178dc95f000 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=4276, stack(0x0000000186900000,0x0000000186a00000)]
+  0x00000178dc95e800 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=15428, stack(0x0000000186800000,0x0000000186900000)]
+  0x00000178dc963000 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=35592, stack(0x0000000186700000,0x0000000186800000)]
+  0x00000178dc95d800 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=27816, stack(0x0000000186600000,0x0000000186700000)]
+  0x00000178dc964000 JavaThread "C2 CompilerThread6" daemon [_thread_in_native, id=16812, stack(0x0000000186500000,0x0000000186600000)]
+  0x00000178dc960000 JavaThread "C2 CompilerThread5" daemon [_thread_in_native, id=36032, stack(0x0000000186400000,0x0000000186500000)]
+=>0x00000178dc95d000 JavaThread "C2 CompilerThread4" daemon [_thread_in_native, id=33208, stack(0x0000000186300000,0x0000000186400000)]
+  0x00000178dc95a800 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=3448, stack(0x0000000186200000,0x0000000186300000)]
+  0x00000178dc955000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=13736, stack(0x0000000186100000,0x0000000186200000)]
+  0x00000178dc8f8800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=35736, stack(0x0000000186000000,0x0000000186100000)]
+  0x00000178dc8f7000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=33836, stack(0x0000000185f00000,0x0000000186000000)]
+  0x00000178dc8f4800 JavaThread "Attach Listener" daemon [_thread_blocked, id=24472, stack(0x0000000185e00000,0x0000000185f00000)]
+  0x00000178dc94e000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=30904, stack(0x0000000185d00000,0x0000000185e00000)]
+  0x00000178dc8bf000 JavaThread "Finalizer" daemon [_thread_blocked, id=12612, stack(0x0000000185c00000,0x0000000185d00000)]
+  0x00000178dc8b6800 JavaThread "Reference Handler" daemon [_thread_blocked, id=31304, stack(0x0000000185b00000,0x0000000185c00000)]
+  0x00000178ca900800 JavaThread "main" [_thread_in_vm, id=33600, stack(0x0000000185900000,0x0000000185a00000)]
+
+Other Threads:
+  0x00000178dc88c000 VMThread [stack: 0x0000000185a00000,0x0000000185b00000] [id=32584]
+  0x00000178dca54000 WatcherThread [stack: 0x0000000186c00000,0x0000000186d00000] [id=17024]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000000a2400000, size: 1500 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ def new generation   total 156096K, used 24997K [0x00000000a2400000, 0x00000000acd50000, 0x00000000c1800000)
+  eden space 138816K,  18% used [0x00000000a2400000, 0x00000000a3c69718, 0x00000000aab90000)
+  from space 17280K,   0% used [0x00000000aab90000, 0x00000000aab90000, 0x00000000abc70000)
+  to   space 17280K,   0% used [0x00000000abc70000, 0x00000000abc70000, 0x00000000acd50000)
+ tenured generation   total 346816K, used 0K [0x00000000c1800000, 0x00000000d6ab0000, 0x0000000100000000)
+   the space 346816K,   0% used [0x00000000c1800000, 0x00000000c1800000, 0x00000000c1800200, 0x00000000d6ab0000)
+ Metaspace       used 5159K, capacity 5240K, committed 5504K, reserved 1056768K
+  class space    used 521K, capacity 532K, committed 640K, reserved 1048576K
+
+Card table byte_map: [0x00000178dbaa0000,0x00000178dbd90000] byte_map_base: 0x00000178db58e000
+
+Polling page: 0x00000178cc6b0000
+
+CodeCache: size=245760Kb used=3984Kb max_used=3984Kb free=241775Kb
+ bounds [0x00000178cc6e0000, 0x00000178ccad0000, 0x00000178db6e0000]
+ total_blobs=706 nmethods=422 adapters=194
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.126 Thread 0x00000178dc8f8800  420       4       java.util.regex.Pattern::peek (26 bytes)
+Event: 0.126 Thread 0x00000178dc95f000  421       3       java.util.regex.Matcher::replaceAll (59 bytes)
+Event: 0.126 Thread 0x00000178dc963000  422       3       java.lang.String::replaceAll (13 bytes)
+Event: 0.126 Thread 0x00000178dc963000 nmethod 422 0x00000178ccabcc10 code [0x00000178ccabcda0, 0x00000178ccabd170]
+Event: 0.126 Thread 0x00000178dc95d800 nmethod 417 0x00000178ccab5ed0 code [0x00000178ccab6040, 0x00000178ccab6168]
+Event: 0.126 Thread 0x00000178dc95f000 nmethod 421 0x00000178ccabb6d0 code [0x00000178ccabb8e0, 0x00000178ccabc700]
+Event: 0.126 Thread 0x00000178dc8f8800 nmethod 420 0x00000178ccab9f10 code [0x00000178ccaba040, 0x00000178ccaba118]
+Event: 0.127 Thread 0x00000178dc961000  423   !   3       java.lang.ClassLoader::loadClass (122 bytes)
+Event: 0.127 Thread 0x00000178dc95e800  424       3       java.lang.ClassLoader::getClassLoadingLock (35 bytes)
+Event: 0.127 Thread 0x00000178dc963000  425       3       java.lang.ClassLoader::findLoadedClass (16 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (3 events):
+Event: 0.076 Thread 0x00000178ca900800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000178cc995d38 method=java.lang.String.hashCode()I @ 14
+Event: 0.094 Thread 0x00000178ca900800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000178cca470c0 method=java.lang.String.indexOf([CII[CIII)I @ 134
+Event: 0.105 Thread 0x00000178ca900800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000178cca56f28 method=java.lang.String.startsWith(Ljava/lang/String;I)Z @ 25
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.099 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a35f5e98) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.099 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a35f60a8) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.099 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a35f7fb0) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.099 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a35f81c0) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.099 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a36056e0) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.099 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a36058f0) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.100 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a3611ec0) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.100 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a36120d0) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.100 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a361fc68) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+Event: 0.100 Thread 0x00000178ca900800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a361fe78) thrown at [J:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1512]
+
+Events (10 events):
+Event: 0.126 loading class com/altera/sopclibrary/conan/ConanMessages
+Event: 0.126 loading class com/altera/sopclibrary/conan/ConanMessages done
+Event: 0.127 loading class com/altera/librarianinterfaces/ICatalogCardProvider$Adder
+Event: 0.127 loading class com/altera/librarianinterfaces/ICatalogCardProvider$Adder done
+Event: 0.127 loading class com/altera/sopclibrary/conan/Analyzer
+Event: 0.127 loading class com/altera/sopclibrary/conan/Analyzer done
+Event: 0.127 loading class java/net/MalformedURLException
+Event: 0.127 loading class java/net/MalformedURLException done
+Event: 0.127 loading class com/altera/sopclibrary/conan/IpxUtils$IIpxFileFixer
+Event: 0.127 loading class com/altera/sopclibrary/conan/IpxUtils$IIpxFileFixer done
+
+
+Dynamic libraries:
+0x00007ff600520000 - 0x00007ff60055a000 	C:\intelfpga_lite\20.1\quartus\bin64\jre64\bin\java.exe
+0x00007ff8721a0000 - 0x00007ff8723a9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8705c0000 - 0x00007ff87067d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff86fca0000 - 0x00007ff87001b000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff871a60000 - 0x00007ff871b0e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8719b0000 - 0x00007ff871a53000 	C:\Windows\System32\msvcrt.dll
+0x00007ff871520000 - 0x00007ff8715be000 	C:\Windows\System32\sechost.dll
+0x00007ff871e70000 - 0x00007ff871f90000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff871370000 - 0x00007ff87151d000 	C:\Windows\System32\USER32.dll
+0x00007ff86fc70000 - 0x00007ff86fc96000 	C:\Windows\System32\win32u.dll
+0x00007ff8715c0000 - 0x00007ff8715e9000 	C:\Windows\System32\GDI32.dll
+0x00007ff86f790000 - 0x00007ff86f8a8000 	C:\Windows\System32\gdi32full.dll
+0x00007ff86fb10000 - 0x00007ff86fbad000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff86f670000 - 0x00007ff86f781000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff861ed0000 - 0x00007ff862175000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ff871970000 - 0x00007ff8719a1000 	C:\Windows\System32\IMM32.DLL
+0x00007fff08b50000 - 0x00007fff08c3f000 	C:\intelfpga_lite\20.1\quartus\bin64\jre64\bin\msvcr120.dll
+0x00007fff08aa0000 - 0x00007fff08b46000 	C:\intelfpga_lite\20.1\quartus\bin64\jre64\bin\msvcp120.dll
+0x00000000731f0000 - 0x0000000073a56000 	C:\intelfpga_lite\20.1\quartus\bin64\jre64\bin\server\jvm.dll
+0x00007ff870140000 - 0x00007ff870148000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff858520000 - 0x00007ff858529000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff867c40000 - 0x00007ff867c73000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff866990000 - 0x00007ff86699a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff871b10000 - 0x00007ff871b7f000 	C:\Windows\System32\WS2_32.dll
+0x00007fff7b1b0000 - 0x00007fff7b1bf000 	C:\intelfpga_lite\20.1\quartus\bin64\jre64\bin\verify.dll
+0x00007fff08a70000 - 0x00007fff08a98000 	C:\intelfpga_lite\20.1\quartus\bin64\jre64\bin\java.dll
+0x00007fff08a50000 - 0x00007fff08a66000 	C:\intelfpga_lite\20.1\quartus\bin64\jre64\bin\zip.dll
+0x00007ff870b50000 - 0x00007ff871308000 	C:\Windows\System32\SHELL32.dll
+0x00007ff86d770000 - 0x00007ff86dfd5000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ff870680000 - 0x00007ff8709f7000 	C:\Windows\System32\combase.dll
+0x00007ff86d600000 - 0x00007ff86d766000 	C:\Windows\SYSTEM32\wintypes.dll
+0x00007ff871b80000 - 0x00007ff871c6a000 	C:\Windows\System32\SHCORE.dll
+0x00007ff8716b0000 - 0x00007ff87170d000 	C:\Windows\System32\shlwapi.dll
+0x00007ff86f5a0000 - 0x00007ff86f5c1000 	C:\Windows\SYSTEM32\profapi.dll
+
+VM Arguments:
+jvm_args: -Xmx1500M -XX:+UseSerialGC 
+java_command: com.altera.sopcmodel.sbtools.sbcatalog.SbCatalog --xml --project-directory= --search-path=$,C:\Users\zedempire\OneDrive\4770\lab7,C:\Users\zedempire\OneDrive\4770\lab7
+java_class_path (initial): C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\Nlview.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\TableLayout.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\appframework-1.03.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\asm-3.1.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\asm-commons-3.1.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\basicmodel.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\beansbinding-1.2.1.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\binding-2.0.6.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.componenteditor2.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.app_lib.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.editor.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.elements.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.plugin.core.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.plugin.hal.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.plugin.lwhal.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.schema.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.bsp.scripting.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.commandline.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.cpexample.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.flash.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.launch.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/model/lib\com.altera.embeddedsw.swinfo.jar;C:/intelfpga_lite/20.1/quartus/sopc_builder/m
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/intelfpga_lite/20.1/quartus/bin64;c:\intelfpga_lite\20.1\quartus\bin64\;c:\intelfpga_lite\20.1\quartus\bin64\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Users\zedempire\anaconda3;C:\Users\zedempire\anaconda3\Scripts;C:\Users\zedempire\anaconda3\Library\bin;C:\Users\zedempire\anaconda3\Library\mingw-w64\bin;C:\Users\zedempire\anaconda3\Library\usr\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\NVIDIA Corporation\Nsight Compute 2022.3.0\;C:\Users\zedempire\AppData\Local\Microsoft\WindowsApps;;C:\Users\zedempire\AppData\Local\Programs\Microsoft VS Code\bin;C:\intelFPGA_lite\20.1\modelsim_ase\win32aloem;C:\Users\zedempire\AppData\Local\Programs\Fiddler
+USERNAME=zedempire
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 22000 (10.0.22000.708)
+
+CPU:total 20 (initial active 20) (10 cores per cpu, 2 threads per core) family 6 model 151 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 33289648k(7494136k free), swap 98725420k(4100k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.265-b01) for windows-amd64 JRE (1.8.0_265-b01), built on Jul 28 2020 15:11:27 by "jenkins" with MS VC++ 12.0 (VS2013)
+
+time: Sun Oct 30 22:09:19 2022
+timezone: ??2???¨¢?¨º¡À
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

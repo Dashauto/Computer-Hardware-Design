@@ -1,0 +1,24 @@
+# main function part
+addi a0, zero, 71  # give value to a0 & a1
+addi a1, zero, 9
+jal Function       # cal function
+j return
+
+# GCD function part
+Function: bge a0, a1, loop
+# we need to know which of the 2 values are the greatest
+# if not switch the values
+add t0, zero, a0
+add a0, zero, a1
+add a1, zero, t0
+# using the algorithm given by the professor:
+loop: rem t1, a0, a1
+beq t1, zero, end
+add a0, zero, a1 # replace remainder
+add a1, zero, t1
+rem t1, a0, a1
+j loop
+end: add a3, zero, a1 # give return value
+jr ra
+
+return:

@@ -1,0 +1,20 @@
+addi a0, zero, 15 # give a value to a0
+jal function
+addi a0, zero, 81 # give a value to a0
+jal function
+j return
+
+function: addi t1, zero, 9  # condition variable
+addi t2, zero, 1  # condition variable
+addi t3, zero, 8  # condition variable
+loop: ble a0, t3, if # if a0 <= 8:
+sub a0, a0, t1       # a0 = a0 - 9
+j loop                 # go back to line 5
+if: bge a0, t2, assign # if a0 >= 1, which means it can not be divisible by 9
+#j end                  # if a0 = 9, which means it can be divisible by 9
+addi a0, zero, 1    # final outputi
+j end
+assign: addi a0, zero, 0 # will set it to 1
+end: jr ra
+
+return:

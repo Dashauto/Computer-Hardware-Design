@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -1.828
+TNS   : -1.828
+
+Type  : Slow 1100mV 85C Model Setup 'Q'
+Slack : -0.604
+TNS   : -0.604
+
+Type  : Slow 1100mV 85C Model Hold 'Q'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Q'
+Slack : -0.538
+TNS   : -0.785
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -0.772
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -1.711
+TNS   : -1.711
+
+Type  : Slow 1100mV 0C Model Setup 'Q'
+Slack : -0.567
+TNS   : -0.567
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Q'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Q'
+Slack : -0.538
+TNS   : -0.778
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -0.772
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -1.411
+TNS   : -1.411
+
+Type  : Fast 1100mV 85C Model Setup 'Q'
+Slack : -0.021
+TNS   : -0.021
+
+Type  : Fast 1100mV 85C Model Hold 'Q'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.536
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.198
+TNS   : -0.198
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Q'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -1.126
+TNS   : -1.126
+
+Type  : Fast 1100mV 0C Model Setup 'Q'
+Slack : 0.021
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Q'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.214
+TNS   : -0.214
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Q'
+Slack : 0.158
+TNS   : 0.000
+
+------------------------------------------------------------

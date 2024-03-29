@@ -1,0 +1,86 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/zedempire/OneDrive/4770/lab2
+vcd3
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1664067414
+!i10b 1
+!s100 GO80LM41G[@eNNRU?`jP12
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ig?f5NfmC8fed[aZL1m5?o2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/zedempire/OneDrive/4770/lab2_3
+w1664067410
+8C:/Users/zedempire/OneDrive/4770/lab2_3/cd3.sv
+FC:/Users/zedempire/OneDrive/4770/lab2_3/cd3.sv
+!i122 44
+L0 61 37
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1664067414.000000
+!s107 C:/Users/zedempire/OneDrive/4770/lab2_3/cd3.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab2_3/cd3.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vtestbench3
+R0
+R1
+!i10b 1
+!s100 `f]JA0Y`R^WgTfK0Y9D2h1
+R2
+I]X2XMURUQU4BF<n=AdE7a0
+R3
+S1
+R4
+w1664031797
+Z9 8C:/Users/zedempire/OneDrive/4770/lab2_3/testbench.sv
+Z10 FC:/Users/zedempire/OneDrive/4770/lab2_3/testbench.sv
+!i122 45
+Z11 L0 1 24
+R5
+r1
+!s85 0
+31
+R6
+Z12 !s107 C:/Users/zedempire/OneDrive/4770/lab2_3/testbench.sv|
+Z13 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab2_3/testbench.sv|
+!i113 1
+R7
+R8
+vtestbench4
+R0
+!s110 1664029783
+!i10b 1
+!s100 VFCgh7OZTajA?<KlD008?2
+R2
+IBc819`_o;l07fh5bEHB?o2
+R3
+S1
+R4
+w1664029523
+R9
+R10
+!i122 29
+R11
+R5
+r1
+!s85 0
+31
+!s108 1664029783.000000
+R12
+R13
+!i113 1
+R7
+R8

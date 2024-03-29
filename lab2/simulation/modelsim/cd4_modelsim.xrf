@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/zedempire/OneDrive/4770/lab2/cd4.sv
+source_file = 1, C:/Users/zedempire/OneDrive/4770/lab2/testbench.sv
+source_file = 1, C:/Users/zedempire/OneDrive/4770/lab2/db/cd4.cbx.xml
+design_name = cd4
+instance = comp, \out_clk~output , out_clk~output, cd4, 1
+instance = comp, \clk~input , clk~input, cd4, 1
+instance = comp, \rst~input , rst~input, cd4, 1
+instance = comp, \Q~0 , Q~0, cd4, 1
+instance = comp, \q~0 , q~0, cd4, 1
+instance = comp, \q~feeder , q~feeder, cd4, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, cd4, 1

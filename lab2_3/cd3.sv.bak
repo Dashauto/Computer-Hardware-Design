@@ -1,0 +1,17 @@
+module cd3 (input logic clk , input logic rst, output logic out_clk );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endmodule

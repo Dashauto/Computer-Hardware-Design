@@ -1,0 +1,14 @@
+
+State Machine - |riscvmulti|riscvmulti1:rvmulti|controller:c|FSM:maind|current_state
+Name current_state.state_A current_state.state_9 current_state.state_8 current_state.state_7 current_state.state_6 current_state.state_5 current_state.state_4 current_state.state_3 current_state.state_2 current_state.state_1 current_state.state_0 
+current_state.state_0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.state_1 0 0 0 0 0 0 0 0 0 1 1 
+current_state.state_2 0 0 0 0 0 0 0 0 1 0 1 
+current_state.state_3 0 0 0 0 0 0 0 1 0 0 1 
+current_state.state_4 0 0 0 0 0 0 1 0 0 0 1 
+current_state.state_5 0 0 0 0 0 1 0 0 0 0 1 
+current_state.state_6 0 0 0 0 1 0 0 0 0 0 1 
+current_state.state_7 0 0 0 1 0 0 0 0 0 0 1 
+current_state.state_8 0 0 1 0 0 0 0 0 0 0 1 
+current_state.state_9 0 1 0 0 0 0 0 0 0 0 1 
+current_state.state_A 1 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "full",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "empty",
+					"strict" : false
+				},
+				{
+					"name" : "write_ptr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "write_ptr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "write_ptr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "write_ptr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "write_ptr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "read_ptr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "read_ptr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "read_ptr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "read_ptr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "read_ptr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wclk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "write_en",
+					"strict" : false
+				},
+				{
+					"name" : "rclk",
+					"strict" : false
+				},
+				{
+					"name" : "read_en",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "wdata[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

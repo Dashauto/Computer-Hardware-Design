@@ -1,0 +1,642 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/zedempire/OneDrive/4770/lab2_3
+valu
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1683431881
+!i10b 1
+!s100 :6M7@jK;AeLhE]Ngb4dJG0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IU6h5QJj]8@X`1[mn@z>n:3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/zedempire/OneDrive/4770/lab9
+Z5 w1670805121
+Z6 8C:/Users/zedempire/OneDrive/4770/lab9/riscvmulti.sv
+Z7 FC:/Users/zedempire/OneDrive/4770/lab9/riscvmulti.sv
+!i122 43
+L0 436 30
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1683431881.000000
+Z10 !s107 C:/Users/zedempire/OneDrive/4770/lab9/riscvmulti.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab9/riscvmulti.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+valudec
+R0
+R1
+!i10b 1
+!s100 EPS5bU=gc^C5X>N2LK1033
+R2
+ImTA<UAN9O^YK1?lJoCm_C3
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 391 25
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vBuffer
+R0
+R1
+!i10b 1
+!s100 Jof=U`QnG@Dh2mBmf:LDC3
+R2
+INoLj@>]_b_=SEVKa[]UKl3
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 222 18
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@buffer
+vBuffer_2
+R0
+R1
+!i10b 1
+!s100 `FTS54I]_VJK8d@R>K`1>2
+R2
+Inl;_aR`MND1=8AhZc6HGz2
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 241 19
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@buffer_2
+vcontroller
+R0
+R1
+!i10b 1
+!s100 e4Kdz8e;[Y:dlWK8<^C<62
+R2
+I`4C50NI;fZl@O62IdJ=EI2
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 264 28
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vdatapath
+R0
+R1
+!i10b 1
+!s100 B^1jmYTJ;HLPBfFCjBoHO0
+R2
+IY7ammz5FnA@nCW@X1<?O:1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 31 52
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vdffdp
+R0
+Z14 !s110 1670527633
+!i10b 1
+!s100 FzFkOXSGmhM^2;?:LT=492
+R2
+I;<ZizD6HN8HBbTQ5JK^VO1
+R3
+S1
+R4
+Z15 w1670527620
+R6
+R7
+!i122 17
+L0 220 17
+R8
+r1
+!s85 0
+31
+Z16 !s108 1670527633.000000
+R10
+R11
+!i113 1
+R12
+R13
+vdffdp2
+R0
+R14
+!i10b 1
+!s100 >IEDIJgH9HG?mV^;@ob<W1
+R2
+IHoE0ofUDCb^6hg4m[U;?L2
+R3
+S1
+R4
+R15
+R6
+R7
+!i122 17
+L0 238 19
+R8
+r1
+!s85 0
+31
+R16
+R10
+R11
+!i113 1
+R12
+R13
+vextend
+R0
+R1
+!i10b 1
+!s100 5TXMlQnLhPgYA=;79gm:[2
+R2
+IiD?]JEoe`;C:9:T5h`1Y93
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 104 18
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vFSM
+R0
+R1
+!i10b 1
+!s100 U[=7fX<YJ?4;F[O3<0Y8_1
+R2
+IQMgLg1IBV:oj?FUb>ON1;1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 294 96
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@f@s@m
+vidmem
+R0
+R1
+!i10b 1
+!s100 jb36KFa1:[CNlblAz2InO2
+R2
+IP^[hGX?m?@AhjP;X`b9hh1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 126 23
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vinstrdec
+R0
+R1
+!i10b 1
+!s100 z^abe<Lo@MYUjR4USBF8z1
+R2
+Ii2A[a8`FaM5om2FO2e@e_3
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 421 14
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vmainFSM
+R0
+Z17 !s110 1670522768
+!i10b 1
+!s100 OJC34OB0Fa>1iLWYPbO>e3
+R2
+IYWW4^<`ceSk[Q9YlV<[Nh1
+R3
+S1
+R4
+Z18 w1670512776
+Z19 8C:/Users/zedempire/OneDrive/4770/lab_test/riscvmulti.sv
+Z20 FC:/Users/zedempire/OneDrive/4770/lab_test/riscvmulti.sv
+!i122 3
+L0 292 238
+R8
+r1
+!s85 0
+31
+Z21 !s108 1670522768.000000
+Z22 !s107 C:/Users/zedempire/OneDrive/4770/lab_test/riscvmulti.sv|
+Z23 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab_test/riscvmulti.sv|
+!i113 1
+R12
+R13
+nmain@f@s@m
+vmux2
+R0
+R1
+!i10b 1
+!s100 bDfG`J?h4Od7U?D2kF;FQ1
+R2
+IMJTVKZc5aJ]6E;nUN[GEf1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 150 7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vmux3
+R0
+R1
+!i10b 1
+!s100 KW2`fIoYk:Xb]mG`gFzZc1
+R2
+IR2>g[3OUB^5^6K9Dj3m0@3
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 158 7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vregdp1
+R0
+!s110 1670525493
+!i10b 1
+!s100 SKW_e5lWz=ZJgmCf[GX^J1
+R2
+I[baDO@od:8DE;B?ZZQ1l`3
+R3
+S1
+R4
+w1670525487
+R6
+R7
+!i122 13
+L0 176 24
+R8
+r1
+!s85 0
+31
+!s108 1670525493.000000
+R10
+R11
+!i113 1
+R12
+R13
+vregdp2
+R0
+!s110 1670526716
+!i10b 1
+!s100 d>BDhCU78e<>FdL_G`QzZ1
+R2
+IOT_V3_n6JQSj1;?hQ_PI02
+R3
+S1
+R4
+w1670526661
+R6
+R7
+!i122 15
+L0 199 26
+R8
+r1
+!s85 0
+31
+!s108 1670526716.000000
+R10
+R11
+!i113 1
+R12
+R13
+vRegFetch
+R0
+R1
+!i10b 1
+!s100 ]cFlK:cnlaBm>;4B^:LCP2
+R2
+ILzdR;CHdVIk[l[P>BnKA21
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 191 27
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@reg@fetch
+vregfile
+R0
+R1
+!i10b 1
+!s100 h9n?YP[<VaD=`H^HAhDMH0
+R2
+IaL=bO[D6V]Z2AXOoL3jhn1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 84 19
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vRegNext
+R0
+R1
+!i10b 1
+!s100 F<gh<SNGnZ?8KdoTLm]^^0
+R2
+IHi9m[W_oN2>>nG4k`hCaO0
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 169 20
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@reg@next
+vriscmulti
+R0
+R17
+!i10b 1
+!s100 @1aHMW7^c`N91aMKI8SOc3
+R2
+I]U=W_m38UR<BZdSoafC6n3
+R3
+S1
+R4
+R18
+R19
+R20
+!i122 3
+L0 14 19
+R8
+r1
+!s85 0
+31
+R21
+R22
+R23
+!i113 1
+R12
+R13
+vriscvmulti
+R0
+R1
+!i10b 1
+!s100 0UlR?]C=cLM2IIlUj^?M91
+R2
+IB6ciOWXND7@fR^CLWKAde2
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+Z24 L0 1 11
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vriscvmulti1
+R0
+R1
+!i10b 1
+!s100 LnXEjUnXdPU2AfTg>H4nE0
+R2
+I`94]Z`>f9_m?26MB21GdP3
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 43
+L0 13 17
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vtestbench
+R0
+R1
+!i10b 1
+!s100 N<8L1m2OoWJZcJnPXnSkJ2
+R2
+I_:_bW3gg]a:1:h]GB3@nD3
+R3
+S1
+R4
+w1670524268
+8C:/Users/zedempire/OneDrive/4770/lab9/riscv_testbench.sv
+FC:/Users/zedempire/OneDrive/4770/lab9/riscv_testbench.sv
+!i122 42
+L0 1 37
+R8
+r1
+!s85 0
+31
+!s108 1683431879.000000
+!s107 C:/Users/zedempire/OneDrive/4770/lab9/riscv_testbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab9/riscv_testbench.sv|
+!i113 1
+R12
+R13
+vtop
+R0
+!s110 1670535507
+!i10b 1
+!s100 dJERgBG8CgEzKM_UBCmSP0
+R2
+I_Men=^L4<JQ<i^N`0WHYJ1
+R3
+S1
+R4
+w1670532344
+R6
+R7
+!i122 41
+R24
+R8
+r1
+!s85 0
+31
+!s108 1670535507.000000
+R10
+R11
+!i113 1
+R12
+R13

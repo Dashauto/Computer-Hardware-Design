@@ -1,0 +1,67 @@
+addi s0, zero, -15
+sw s0, 0x400(zero) # memory[400] = -15
+addi s0, zero, 42
+sw s0, 0x404(zero) # memory[404] = 42
+addi s0, zero, 73
+sw s0, 0x408(zero) # memory[408] = 73
+addi s0, zero, 19
+sw s0, 0x40c(zero) # memory[40c] = 19
+addi s0, zero, -8
+sw s0, 0x410(zero) # memory[410] = -8
+addi s0, zero, 24
+sw s0, 0x414(zero) # memory[414] = 24
+addi s0, zero, 16
+sw s0, 0x418(zero) # memory[418] = 16
+addi s0, zero, -2
+sw s0, 0x41c(zero) # memory[41c] = -2
+addi s0, zero, 99
+sw s0, 0x420(zero) # memory[420] = 99
+addi s0, zero, -78
+sw s0, 0x424(zero) # memory[424] = -78
+addi s0, zero, -21
+sw s0, 0x428(zero) # memory[428] = -21
+addi s0, zero, 23
+sw s0, 0x42c(zero) # memory[42c] = 23
+addi s0, zero, -88
+sw s0, 0x430(zero) # memory[430] = -88
+addi s0, zero, 49
+sw s0, 0x434(zero) # memory[434] = 49
+addi s0, zero, -101
+sw s0, 0x438(zero) # memory[438] = -101
+
+# main function part
+addi a0, zero, 0x400
+addi a1, zero, 15
+jal Function
+j return
+
+# BubblesortFunction
+Function: addi s0, zero, 1
+addi t0, zero , 1  # change = 1
+ 
+loop: beq t0, zero, end
+addi t0, zero, 0  # change = 0
+addi t2, zero, 0  # x = 0
+addi t3, zero, 4  # y = 1
+add t1, zero, a1
+addi t1, t1, -1   # num = 14
+
+for: beq t1, zero, switch
+lw s1, 0x400(t2)  # s1 = array[x]
+lw s2, 0x400(t3)  # s2 = array[y]
+blt s1, s2, con   # if s1 < s2, then do nothing
+addi t5, s1, 0    # otherwise: t5 = s1
+addi s1, s2, 0    # s1 = s2
+addi s2, t5, 0    # s2 = t5
+addi t0, t0, 1    # change += 1
+con: sw s1, 0x400(t2)  # array[x] = s1
+sw s2, 0x400(t3)  # array[y] = s2
+addi t2, t2, 4    # x += 1
+addi t3, t3, 4    # y += 1
+addi t1, t1, -1   # t1 -= 1
+j for
+switch:
+j loop
+end: jr ra
+
+return:

@@ -1,0 +1,31 @@
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# vsim -gui work.testbench3 
+# Start time: 17:19:43 on Sep 23,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+run 400000
+# Break key hit
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# End time: 17:28:06 on Sep 23,2022, Elapsed time: 0:08:23
+# Errors: 0, Warnings: 3
+# vsim -gui work.testbench3 
+# Start time: 17:28:06 on Sep 23,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+run 400000

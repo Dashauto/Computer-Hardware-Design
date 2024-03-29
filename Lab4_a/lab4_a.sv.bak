@@ -1,0 +1,108 @@
+`timescale 1ns / 1ps
+//
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2022/02/22 13:02:45
+// Design Name: 
+// Module Name: async_fifo
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//
+
+
+module lab4_a
+#(parameter DATA_WIDTH = 32,
+  parameter FIFO_DEPTH = 32)
+(
+input logic rst,
+//写端口
+input logic wclk,
+input logic [DATA_WIDTH-1:0] wdata,
+input logic wr_en,
+output logic full,
+//读端口
+input logic rclk,
+input logic rd_en,
+output logic [DATA_WIDTH-1:0] rdata,
+output logic empty
+    );
+parameter ADDR_WIDTH=$clog2(FIFO_DEPTH);
+logic [DATA_WIDTH-1:0] RAM [FIFO_DEPTH-1];
+
+logic [ADDR_WIDTH-1:0] wr_addr;                  //RAM写地址(下一个将要写入的地址)
+logic [ADDR_WIDTH-1:0] rd_addr;                  //RAM读地址(下一个将要读出的地址)
+logic [ADDR_WIDTH:0] wr_ptr;                     //有额外标志位
+logic [ADDR_WIDTH:0] rd_ptr;                     //有额外标志位
+//
+logic [ADDR_WIDTH:0] wr_ptr_gray;
+logic [ADDR_WIDTH:0] wr_ptr_gray_d1;
+logic [ADDR_WIDTH:0] wr_ptr_gray_d2;
+//
+logic [ADDR_WIDTH:0] rd_ptr_gray;
+logic [ADDR_WIDTH:0] rd_ptr_gray_d1;
+logic [ADDR_WIDTH:0] rd_ptr_gray_d2;
+//wr_ptr
+always_ff@(posedge wclk,posedge rst)
+if(rst)
+    wr_ptr<=0;
+else if(wr_en&&~full)                    //写使能为高且fifo未满
+    wr_ptr<=wr_ptr+1;                    //数据写入，地址自增1，指向下一个要写入的地址
+//rd_ptr
+always_ff@(posedge rclk,posedge rst)
+if(rst)
+    rd_ptr<=0;
+else if(rd_en&&~empty)                   //写使能且fifo非空
+    rd_ptr<=rd_ptr+1;                    //数据读出，地址自增1，指向下一个要读出的地址
+//wr_addr,rd_addr
+assign wr_addr=wr_ptr[ADDR_WIDTH-1:0];
+assign rd_addr=rd_ptr[ADDR_WIDTH-1:0];               //实际的RAM地址，去掉指针最高位
+//write
+always_ff@(posedge wclk)
+if(wr_en&&~full)
+    RAM[wr_addr]<=wdata;                  //在写使能有效且fifo未满的时候数据写入
+//read
+always_ff@(posedge rclk)
+if(rd_en&&~empty)
+    rdata<=RAM[rd_addr];                   //数据读出
+//格雷码转换
+assign wr_ptr_gray=(wr_ptr >> 1) ^ wr_ptr;
+assign rd_ptr_gray=(rd_ptr >> 1) ^ rd_ptr;              //右移一位后和自身异或
+//格雷码同步，打两拍
+always_ff@(posedge wclk,posedge rst)
+if(rst)
+begin
+    rd_ptr_gray_d1<=0;
+    rd_ptr_gray_d2<=0;
+end
+else
+begin
+    rd_ptr_gray_d1<=rd_ptr_gray;                            
+    rd_ptr_gray_d2<=rd_ptr_gray_d1;                         //将转为格雷码后的读指针同步到写时钟域,由于格雷码的特性，可以按照单bit信号的同步方式进行
+end
+//将写指针同步到读时钟域
+always_ff@(posedge rclk,posedge rst)
+if(rst)
+begin
+    wr_ptr_gray_d1<=0;
+    wr_ptr_gray_d2<=0;
+end
+else
+begin
+    wr_ptr_gray_d1<=wr_ptr_gray;
+    wr_ptr_gray_d2<=wr_ptr_gray_d1;                         //将写指针同步到读时钟域，以便进行比较，生成empty信号
+end
+//empty full
+assign full=(wr_ptr_gray=={~rd_ptr_gray_d2[ADDR_WIDTH:ADDR_WIDTH-1],rd_ptr_gray_d2[ADDR_WIDTH-2:0]})?1'b1:1'b0;       //高两位不同,其他相同
+assign empty=(rd_ptr_gray==wr_ptr_gray_d2)?1'b1:1'b0;
+endmodule
+

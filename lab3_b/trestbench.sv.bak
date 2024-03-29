@@ -1,0 +1,24 @@
+module testbench3;
+
+logic clk, reset,left, right, la, lb, lc, ra, rb, rc;
+
+timeunit 1ns;
+timeprecision 1ps;
+
+lab3_b dut(clk, reset,left, right, la, lb, lc, ra, rb, rc);
+ 
+initial
+	begin
+		rst = 0;
+		clk = 0;
+		#10 rst = 1;
+	end
+	
+always
+
+	begin
+		#5 clk = 1;
+		#5 clk = 0;
+	end
+	
+endmodule

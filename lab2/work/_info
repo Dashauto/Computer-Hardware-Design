@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1
+vcd4
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1664069578
+!i10b 1
+!s100 MPibOCj[iY:D]K`84AZb93
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I90HT>eM^528KdOD206GJ>0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/zedempire/OneDrive/4770/lab2
+w1663871387
+8C:/Users/zedempire/OneDrive/4770/lab2/cd4.sv
+FC:/Users/zedempire/OneDrive/4770/lab2/cd4.sv
+!i122 21
+L0 1 29
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1664069578.000000
+!s107 C:/Users/zedempire/OneDrive/4770/lab2/cd4.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab2/cd4.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vtestbench4
+R0
+R1
+!i10b 1
+!s100 o][OA]a[mkAOPhDjOQFCD2
+R2
+IYz:GKRQON`1GN6`H4eCF`1
+R3
+S1
+R4
+w1663867215
+8C:/Users/zedempire/OneDrive/4770/lab2/testbench.sv
+FC:/Users/zedempire/OneDrive/4770/lab2/testbench.sv
+!i122 22
+L0 1 24
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zedempire/OneDrive/4770/lab2/testbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab2/testbench.sv|
+!i113 1
+R7
+R8

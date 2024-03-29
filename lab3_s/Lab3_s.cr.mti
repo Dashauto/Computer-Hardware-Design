@@ -1,0 +1,15 @@
+C:/Users/zedempire/OneDrive/4770/lab3_s/testbench.sv {1 {vlog -work work -sv -stats=none C:/Users/zedempire/OneDrive/4770/lab3_s/testbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} C:/Users/zedempire/OneDrive/4770/lab3_s/Lab3_s.sv {1 {vlog -work work -sv -stats=none C:/Users/zedempire/OneDrive/4770/lab3_s/Lab3_s.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Lab3_s
+
+Top level modules:
+	Lab3_s
+
+} {} {}}

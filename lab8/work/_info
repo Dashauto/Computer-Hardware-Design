@@ -1,0 +1,188 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/zedempire/OneDrive/4770/lab7
+valudec
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1668993540
+!i10b 1
+!s100 aTcD[YCF;GGhhWj54fhL10
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Im0P8n^Y6HNL0JUGCM1h[B3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/zedempire/OneDrive/4770/lab8
+Z5 w1668993438
+Z6 8C:/Users/zedempire/OneDrive/4770/lab8/controller.sv
+Z7 FC:/Users/zedempire/OneDrive/4770/lab8/controller.sv
+!i122 18
+L0 263 25
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1668993540.000000
+Z10 !s107 C:/Users/zedempire/OneDrive/4770/lab8/controller.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab8/controller.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+vcontroller
+R0
+R1
+!i10b 1
+!s100 Zz3NS4Rg<@`AHlD=_]QDC0
+R2
+I4UGJDA_lF4X7VeRgBd1370
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 18
+L0 1 22
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vFSM
+R0
+!s110 1668982923
+!i10b 1
+!s100 :N;b>a35KjF3<nMH@l2^X0
+R2
+I4?m=a0XLcVeJVmXVQ?5k90
+R3
+S1
+R4
+w1668982401
+R6
+R7
+!i122 14
+L0 31 96
+R8
+r1
+!s85 0
+31
+!s108 1668982923.000000
+R10
+R11
+!i113 1
+R12
+R13
+n@f@s@m
+vinstrdec
+R0
+R1
+!i10b 1
+!s100 z5GWN1a>B>SHVOzbWD8223
+R2
+I^Gd7@L@F3;5R5K5Abc5[12
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 18
+L0 290 13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vmaindec
+R0
+!s110 1668981126
+!i10b 1
+!s100 WNFzeU7l<EG?FV6oY;3?Q0
+R2
+IjaMTc]fKOU^O=f4GKe:ZJ1
+R3
+S1
+R4
+w1668981122
+R6
+R7
+!i122 8
+L0 30 82
+R8
+r1
+!s85 0
+31
+!s108 1668981126.000000
+R10
+R11
+!i113 1
+R12
+R13
+vmainFSM
+R0
+R1
+!i10b 1
+!s100 Y:PVo1^bG_2Y]6o^Q<QO?1
+R2
+I<IGVOL9[?F5=eJUngB>Dg0
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 18
+L0 24 238
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+nmain@f@s@m
+vtestbench
+R0
+R1
+!i10b 1
+!s100 8<V;FofKTfbVa_KFoU?fP3
+R2
+IYfMCIbb0OCgngkU`^9zOP0
+R3
+S1
+R4
+w1668979813
+8C:/Users/zedempire/OneDrive/4770/lab8/controller_testbench.sv
+FC:/Users/zedempire/OneDrive/4770/lab8/controller_testbench.sv
+!i122 19
+L0 6 80
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/zedempire/OneDrive/4770/lab8/controller_testbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zedempire/OneDrive/4770/lab8/controller_testbench.sv|
+!i113 1
+R12
+R13

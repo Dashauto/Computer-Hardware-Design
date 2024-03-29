@@ -1,0 +1,169 @@
+module controller(input  logic [6:0] op,
+                  input  logic [2:0] funct3,
+                  input  logic       funct7b5,
+                  input  logic       Zero,
+                  input  logic       clk,
+                  input  logic       reset,
+                  output logic [1:0] ResultSrc,
+                  output logic [1:0] AluSrca, AluSrcb,
+                  output logic [2:0] ALUControl,
+                  output logic [1:0] ImmSrc,
+                  output logic       AdrSrc,
+                  output logic       IrWrite, PcWrite,
+                  output logic       RegWrite, MemWrite,
+                  );
+
+  logic [1:0] ALUOp;
+  logic       Branch;
+  logic       PcUpdate
+
+  FSM maind(op[6:0], reset, clk, ResultSrc[1:0], AluSrca[1:0], AluSrcb[1:0], ALUOp[1:0], MemWrite, Branch,
+                RegWrite, PcUpdate, AdrSrc, IrWrite);
+
+  aludec  alud(op[5], funct3, funct7b5, ALUOp[1:0], ALUControl[2:0]);
+
+  instrdec istrd(op, ImmSrc);
+
+  assign PcWrite = Branch & Zero | PcUpdate;
+endmodule
+
+module aludec(input  logic       opb5,
+              input  logic [2:0] funct3,
+              input  logic       funct7b5, 
+              input  logic [1:0] ALUOp,
+              output logic [3:0] ALUControl);
+
+  logic  RtypeSub;
+  assign RtypeSub = funct7b5 & opb5;  // TRUE for R-type subtract instruction
+
+  always_comb
+    case(ALUOp)
+      2'b00:                ALUControl = 4'b0000; // addition
+      2'b01:                ALUControl = 4'b0001; // subtraction
+      2'b11:                ALUControl = 4'b1000; // lui
+      default: case(funct3) // R-type or I-type ALU
+                 3'b000:  if (RtypeSub) 
+                            ALUControl = 4'b0001; // sub
+                          else          
+                            ALUControl = 4'b0000; // add, addi
+                 3'b010:    ALUControl = 4'b0101; // slt, slti
+                 3'b110:    ALUControl = 4'b0011; // or, ori
+                 3'b111:    ALUControl = 4'b0010; // and, andi
+                 3'b100:    ALUControl = 4'b0100; // xor
+                 default:   ALUControl = 4'bxxxx; // ???
+               endcase
+    endcase
+endmodule
+
+module FSM (input  logic [6:0] op,
+            input  logic reset,
+			input  logic clk,
+			output logic [1:0] ResultSrc,
+            output logic [1:0] AluSrca, AluSrcb,
+            output logic [1:0] ALUOp,
+            output logic       MemWrite,
+			output logic       Branch,
+            output logic       RegWrite, PcUpdate,
+			output logic		  adrsrc,
+			output logic 	  irwrite
+            );
+					
+logic [3:0] current_state
+logic [13:0] controls;
+assign {ResultSrc, MemWrite, Branch, AluSrca, AluSrcb,
+		RegWrite, PcUpdate, AdrSrc, IrWrite, ALUOp} = controls;
+
+parameter state_0 = 4'b0000;
+parameter state_1 = 4'b0001;
+parameter state_2 = 4'b0010;
+parameter state_3 = 4'b0011;
+parameter state_4 = 4'b0100;
+parameter state_5 = 4'b0101;
+parameter state_6 = 4'b0110;
+parameter state_7 = 4'b0111;
+parameter state_8 = 4'b1000;
+parameter state_9 = 4'b1001;
+parameter state_A = 4'b1010;
+
+always @(posedge clk) 
+begin
+	if (reset) begin
+		current_state = state_0;
+	end
+	else begin
+		case (current_state)
+            state_0: current_state = state_1;
+
+            state_1: begin
+                case(op)
+                    7'b0000011: current_state = state_2; // lw
+				    7'b0100011: current_state = state_2; // sw
+					7'b0110011: current_state = state_6; // R-type 
+					7'b0010011: current_state = state_8; // I-type ALU
+					7'b1101111: current_state = state_9; // jal
+					7'b1100011: current_state = state_A; // beq
+					default:    current_state = state_1; // non-implemented instruction 
+
+                endcase
+            end
+
+            state_2: begin
+                case(op)
+                    7'b0000011: current_state = state_3; // lw
+					7'b0100011: current_state = state_5; // sw
+					default:    current_state = state_2; // non-implemented instruction
+
+                endcase
+            end
+
+            state_3: current_state = state_4;
+
+            state_4: current_state = state_0;
+            state_5: current_state = state_0;
+            state_7: current_state = state_0;
+            state_A: current_state = state_0;
+
+            state_6: current_state = state_7;
+            state_8: current_state = state_7;
+            state_9: current_state = state_7;
+
+        endcase
+			
+	end
+		
+end
+	
+always_comb
+    case(current_state)
+    // 2ResultSrc_MemWrite_Branch_2alusrca_2alusrcb_RegWrite_PCUpdate_adrsrc_irwrite_2ALUOp
+        state_0: controls <= 14'b10_0_0_00_10_0_1_0_1_00; //Fetch           
+        state_1: controls <= 14'b00_0_0_01_01_0_0_0_0_00; //Decode
+        state_2: controls <= 14'b00_0_0_10_01_0_0_0_0_00; //MemAdr
+        state_3: controls <= 14'b00_0_0_00_00_0_0_1_0_00; //MemRead
+        state_4: controls <= 14'b01_0_0_00_00_1_0_0_0_00; //MemWB
+        state_5: controls <= 14'b00_1_0_00_00_0_0_1_0_00; //MemWrite
+	    state_6: controls <= 14'b00_0_0_10_00_0_0_0_0_10; //ExecuteR
+		state_7: controls <= 14'b00_0_0_00_00_1_0_0_0_00; //ALUWB
+		state_8: controls <= 14'b00_0_0_10_01_0_0_0_0_10; //ExecuteI
+		state_9: controls <= 14'b00_0_0_01_10_0_1_0_0_00; //JAL
+		state_A: controls <= 14'b00_0_1_10_00_0_0_0_0_01; //BEQ
+        default: controls <= 14'b00_0_0_00_00_0_0_0_0_00; // non-implemented instruction
+    endcase
+	
+endmodule
+
+module instrdec (input  logic [6:0] op,
+				 output logic [1:0] ImmSrc
+                 );
+always_comb
+	case(op)
+		7'b0110011: ImmSrc = 2'bxx; // R-type
+		7'b0010011: ImmSrc = 2'b00; // I-type ALU
+		7'b0000011: ImmSrc = 2'b00; // lw
+		7'b0100011: ImmSrc = 2'b01; // sw
+		7'b1100011: ImmSrc = 2'b10; // beq
+		7'b1101111: ImmSrc = 2'b11; // jal
+		default:    ImmSrc = 2'bxx; // ???
+	endcase
+endmodule
+

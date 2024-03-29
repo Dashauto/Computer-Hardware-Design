@@ -1,0 +1,21 @@
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench3
+# vsim -gui work.testbench3 
+# Start time: 09:17:41 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench3
+# Loading work.cd3
+add wave  \
+sim:/testbench3/clk_in \
+sim:/testbench3/rst_n \
+sim:/testbench3/clk_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zedempire  Hostname: ZEDEMPIRE  ProcessID: 22416
+#           Attempting to use alternate WLF file "./wlft92zbdh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft92zbdh
+# Break key hit
+# End time: 09:18:17 on Sep 24,2022, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 4

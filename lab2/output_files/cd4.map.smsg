@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at cd4.sv(3): object "D" differs only in case from object "d" in the same scope File: C:/Users/zedempire/OneDrive/4770/lab2/cd4.sv Line: 3
+Info (10281): Verilog HDL Declaration information at cd4.sv(3): object "Q" differs only in case from object "q" in the same scope File: C:/Users/zedempire/OneDrive/4770/lab2/cd4.sv Line: 3

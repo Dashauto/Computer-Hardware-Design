@@ -1,0 +1,15 @@
+# Compile of cd3.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench4
+# vsim -gui work.testbench4 
+# Start time: 10:30:08 on Sep 24,2022
+# Loading sv_std.std
+# Loading work.testbench4
+# ** Error: (vsim-3033) Instantiation of 'cd4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench4 File: C:/Users/zedempire/OneDrive/4770/lab2_3/testbench.sv Line: 8
+#         Searched libraries:
+#             C:/Users/zedempire/OneDrive/4770/lab2_3/work
+# Error loading design
+# End time: 10:30:08 on Sep 24,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 6

@@ -1,0 +1,87 @@
+`timescale 1ns / 1ps
+
+module test;
+parameter DATA_WIDTH = 8;
+parameter FIFO_DEPTH = 16;
+logic wr_en_r;
+logic rd_en_r;
+logic clk;
+logic rst;
+logic wr_en;
+logic rd_en;
+logic [DATA_WIDTH-1:0] wdata;
+logic [DATA_WIDTH-1:0] rdata;
+logic empty;
+logic full;
+logic [DATA_WIDTH-1:0] ref_data;
+logic rd_en_ff1;
+logic error;
+logic change = 1'b0;
+//ref_data
+always_ff@(posedge clk,posedge rst)
+if(rst)
+    ref_data<=0;
+else if(rd_en_ff1)
+    ref_data<=ref_data+1;
+//rd_en_ff1
+always_ff@(posedge clk)
+    rd_en_ff1<=rd_en;
+//wr_en,rd_en
+assign wr_en=(~full) ? wr_en_r:1'b0;
+assign rd_en=(~empty) ? rd_en_r:1'b0;
+ 
+always_ff@(posedge clk)
+if(full)
+	change <= 1'b1;
+
+
+//clk
+initial begin
+    clk=0;
+    forever begin
+        #5 clk=~clk;
+    end
+end
+//rst
+initial
+begin
+    rst=1;
+    #20
+    rst=0;
+end
+//wdata
+always_ff@(posedge clk,posedge rst)
+if(rst)
+    wdata<=0;
+else if(wr_en&&~full)                //每写入一个数据，加1
+    wdata<=wdata+1;
+//wr_en
+always_ff@(posedge clk,posedge rst)
+if(rst)
+    wr_en_r<=0;
+else if(~change)               //有60%的几率写数据,衡量数据写入速率
+    wr_en_r<=1'b1;
+else
+    wr_en_r<=1'b0;
+//rd_en
+always_ff@(posedge clk,posedge rst)
+if(rst)
+    rd_en_r<=0;
+else if(change)                //有40%的几率读数据，衡量数据读出速率
+    rd_en_r<=1'b1;
+else 
+    rd_en_r<=1'b0;
+always_comb
+if(rd_en_ff1&&ref_data!=rdata)
+   error=1;
+else
+   error=0;
+lab4_a
+#(
+.DATA_WIDTH(8),
+.FIFO_DEPTH(16)
+)
+U
+(.*);
+endmodule
+

@@ -1,0 +1,7 @@
+|cd4
+clk => Q.CLK
+rst => Q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+out_clk << q.DB_MAX_OUTPUT_PORT_TYPE
+
+

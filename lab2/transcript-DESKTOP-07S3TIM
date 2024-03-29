@@ -1,0 +1,62 @@
+# Compile of cd4.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench4
+# vsim -gui work.testbench4 
+# Start time: 13:16:49 on Sep 22,2022
+# Loading sv_std.std
+# Loading work.testbench4
+# Loading work.cd4
+add wave  \
+sim:/testbench4/clk \
+sim:/testbench4/rst \
+sim:/testbench4/out_clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zedempire  Hostname: ZEDEMPIRE  ProcessID: 33964
+#           Attempting to use alternate WLF file "./wlftibai57".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftibai57
+run 1000
+# Break key hit
+# Compile of cd4.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench4
+# End time: 13:23:18 on Sep 22,2022, Elapsed time: 0:06:29
+# Errors: 0, Warnings: 5
+# vsim -gui work.testbench4 
+# Start time: 13:23:18 on Sep 22,2022
+# Loading sv_std.std
+# Loading work.testbench4
+# Loading work.cd4
+add wave  \
+sim:/testbench4/clk \
+sim:/testbench4/rst \
+sim:/testbench4/out_clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zedempire  Hostname: ZEDEMPIRE  ProcessID: 33964
+#           Attempting to use alternate WLF file "./wlft0z8tkw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0z8tkw
+run 1000
+quit -sim
+# End time: 13:26:21 on Sep 22,2022, Elapsed time: 0:03:03
+# Errors: 0, Warnings: 3
+vsim -gui work.testbench4
+# vsim -gui work.testbench4 
+# Start time: 13:26:53 on Sep 22,2022
+# Loading sv_std.std
+# Loading work.testbench4
+# Loading work.cd4
+add wave  \
+sim:/testbench4/clk \
+sim:/testbench4/rst \
+sim:/testbench4/out_clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zedempire  Hostname: ZEDEMPIRE  ProcessID: 33964
+#           Attempting to use alternate WLF file "./wlfticfiy4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfticfiy4
+run 1000
+# End time: 13:28:45 on Sep 22,2022, Elapsed time: 0:01:52
+# Errors: 0, Warnings: 3

@@ -1,0 +1,96 @@
+# Compile of lab3_b.sv was successful.
+# Compile of trestbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 15:40:23 on Oct 01,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab3_b
+add wave  \
+sim:/testbench/clk \
+sim:/testbench/reset \
+sim:/testbench/left \
+sim:/testbench/right \
+sim:/testbench/la \
+sim:/testbench/lb \
+sim:/testbench/lc \
+sim:/testbench/ra \
+sim:/testbench/rb \
+sim:/testbench/rc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zedempire  Hostname: ZEDEMPIRE  ProcessID: 19084
+#           Attempting to use alternate WLF file "./wlfti1vyv4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfti1vyv4
+# Break key hit
+vsim -gui work.testbench
+# End time: 15:40:53 on Oct 01,2022, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 4
+# vsim -gui work.testbench 
+# Start time: 15:40:53 on Oct 01,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab3_b
+add wave  \
+sim:/testbench/clk \
+sim:/testbench/reset \
+sim:/testbench/left \
+sim:/testbench/right \
+sim:/testbench/la \
+sim:/testbench/lb \
+sim:/testbench/lc \
+sim:/testbench/ra \
+sim:/testbench/rb \
+sim:/testbench/rc
+run 400000
+# Compile of lab3_b.sv was successful.
+# Compile of trestbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 15:42:18 on Oct 01,2022, Elapsed time: 0:01:25
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench 
+# Start time: 15:42:18 on Oct 01,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab3_b
+add wave  \
+sim:/testbench/clk \
+sim:/testbench/reset \
+sim:/testbench/left \
+sim:/testbench/right \
+sim:/testbench/la \
+sim:/testbench/lb \
+sim:/testbench/lc \
+sim:/testbench/ra \
+sim:/testbench/rb \
+sim:/testbench/rc
+run 400000
+# Compile of lab3_b.sv was successful.
+# Compile of trestbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 15:44:21 on Oct 01,2022, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench 
+# Start time: 15:44:21 on Oct 01,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab3_b
+add wave  \
+sim:/testbench/clk \
+sim:/testbench/reset \
+sim:/testbench/left \
+sim:/testbench/right \
+sim:/testbench/la \
+sim:/testbench/lb \
+sim:/testbench/lc \
+sim:/testbench/ra \
+sim:/testbench/rb \
+sim:/testbench/rc
+run 400000
+# Break key hit
+quit -sim
+# End time: 16:11:09 on Oct 01,2022, Elapsed time: 0:26:48
+# Errors: 0, Warnings: 1

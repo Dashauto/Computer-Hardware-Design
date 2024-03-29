@@ -1,0 +1,45 @@
+module lab3_b(input logic clk,
+ input logic reset,
+ input logic left, right,
+ output logic la, lb, lc, ra, rb, rc);
+
+logic [2:0]current_state;
+logic [2:0]next_state;
+
+logic [2:0]SAT = 3'b000;
+logic [2:0]LE0 = 3'b001;
+logic [2:0]LE1 = 3'b010;
+logic [2:0]LE2 = 3'b011;
+logic [2:0]RE0 = 3'b100;
+logic [2:0]RE1 = 3'b101;
+logic [2:0]RE2 = 3'b110;
+
+always_ff @ (posedge clk or negedge reset)
+begin
+	if(!reset)
+	
+		
+
+
+end
+
+always_comb
+	casez(current_state)
+		3'b
+	
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ endmodule
+
+
+ 

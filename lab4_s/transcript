@@ -1,0 +1,272 @@
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# vsim -gui work.test 
+# Start time: 20:30:14 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data
+run 400000
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# End time: 20:41:38 on Oct 09,2022, Elapsed time: 0:11:24
+# Errors: 0, Warnings: 14
+# vsim -gui work.test 
+# Start time: 20:41:38 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data \
+sim:/test/change
+run 400000
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# End time: 20:42:45 on Oct 09,2022, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 2
+# vsim -gui work.test 
+# Start time: 20:42:45 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data \
+sim:/test/change
+run 400000
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# End time: 20:45:55 on Oct 09,2022, Elapsed time: 0:03:10
+# Errors: 0, Warnings: 2
+# vsim -gui work.test 
+# Start time: 20:45:55 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data \
+sim:/test/change
+run 400000
+run 450000
+vsim -gui work.test
+# End time: 20:47:04 on Oct 09,2022, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 1
+# vsim -gui work.test 
+# Start time: 20:47:04 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data \
+sim:/test/change
+run 450000
+# Load canceled
+# Compile of lab4_a.sv was successful with warnings.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# End time: 20:55:40 on Oct 09,2022, Elapsed time: 0:08:36
+# Errors: 0, Warnings: 2
+# vsim -gui work.test 
+# Start time: 20:55:40 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data \
+sim:/test/change \
+sim:/test/write_ptr \
+sim:/test/read_ptr
+run 426000
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# End time: 20:57:52 on Oct 09,2022, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 2
+# vsim -gui work.test 
+# Start time: 20:57:52 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data \
+sim:/test/change \
+sim:/test/write_ptr \
+sim:/test/read_ptr
+run 426000
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of lab4_a.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# End time: 21:12:21 on Oct 09,2022, Elapsed time: 0:14:29
+# Errors: 0, Warnings: 5
+# vsim -gui work.test 
+# Start time: 21:12:21 on Oct 09,2022
+# Loading sv_std.std
+# Loading work.test
+# Loading work.lab4_a
+add wave  \
+sim:/test/DATA_WIDTH \
+sim:/test/FIFO_DEPTH \
+sim:/test/PERIOD_W \
+sim:/test/PERIOD_R \
+sim:/test/rst \
+sim:/test/wclk \
+sim:/test/wdata \
+sim:/test/write_en \
+sim:/test/full \
+sim:/test/rclk \
+sim:/test/rdata \
+sim:/test/read_en \
+sim:/test/empty \
+sim:/test/error \
+sim:/test/write_en_r \
+sim:/test/read_en_r \
+sim:/test/read_en_d1 \
+sim:/test/ref_data \
+sim:/test/change \
+sim:/test/write_ptr \
+sim:/test/read_ptr
+run 400000
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"

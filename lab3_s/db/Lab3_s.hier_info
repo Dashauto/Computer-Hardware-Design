@@ -1,0 +1,23 @@
+|Lab3_s
+clk => Q6.CLK
+clk => Q5.CLK
+clk => Q4.CLK
+clk => Q3.CLK
+clk => Q2.CLK
+clk => Q1.CLK
+reset => Q1.IN1
+reset => Q2.IN1
+reset => Q3.IN1
+reset => Q4.IN1
+reset => Q5.IN1
+reset => Q6.IN1
+left => a3.IN2
+right => a6.IN2
+la <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+lb <= Q2.DB_MAX_OUTPUT_PORT_TYPE
+lc <= Q3.DB_MAX_OUTPUT_PORT_TYPE
+ra <= Q4.DB_MAX_OUTPUT_PORT_TYPE
+rb <= Q5.DB_MAX_OUTPUT_PORT_TYPE
+rc <= Q6.DB_MAX_OUTPUT_PORT_TYPE
+
+
